@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Task 7</title>
     <link rel="stylesheet" type="text/css" href="style 7.css">
-    <script src="script 7.js"></script>
+    <script src="script 7.java"></script>
     <style>
         .form{
             display: table;
@@ -14,7 +14,7 @@
         }
         .input{
             display: grid;
-            width: 234px;
+            width: 238px;
             height: auto;
             font-size: 24px;
             margin-bottom: 10px;
@@ -25,16 +25,32 @@
             font-size: 16px;
             margin-right: 5px;
         }
+        .draw-field{
+            width: 800px;
+            height: 800px;
+            display: flex;
+        }
+        .square{
+            opacity: 0.8;
+        }
+        .circle{
+            opacity: 0.8;
+        }
+        .triangle{
+            opacity: 0.8;
+        }
     </style>
 </head>
 
 <body>
     <div class="form">
         <input class="input" placeholder="Поле ввода">
+
+        <button class="square">Квадрат</button>
+        <button class="triangle">Треугольник</button>
+        <button class="circle">Круг</button>
     </div>
-    <button class="square">Квадрат</button>
-    <button class="triangle">Треугольник</button>
-    <button class="circle">Круг</button>
+    <div class="draw-field"></div>
 </input>
 </body>
 </html>
