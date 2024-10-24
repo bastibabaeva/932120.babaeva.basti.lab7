@@ -33,6 +33,16 @@ function draw_square(number) {
         square.style.backgroundColor = 'red';
         let isFirstClick = true; // Флаг для отслеживания первого клика
 
+        square.addEventListener('click', function () {
+            if (isFirstClick) {
+                square.style.backgroundColor = 'yellow';
+                isFirstClick = false;
+            } else {
+                square.remove();
+            }
+        });
+
+
         drawField.appendChild(square);
     }
 }
@@ -57,6 +67,15 @@ function draw_circle(number) {
         circle.style.borderRadius='50%';
         let isFirstClick = true; // Флаг для отслеживания первого клика
 
+        circle.addEventListener('click', function () {
+            if (isFirstClick) {
+                circle.style.backgroundColor = 'yellow';
+                isFirstClick = false;
+            } else {
+                circle.remove();
+            }
+        });
+
         drawField.appendChild(circle);
     }
 }
@@ -79,6 +98,15 @@ function draw_triangle(number) {
         triangle.style.borderRight = size/2 + 'px solid transparent';
         triangle.style.borderBottom= size + 'px solid #1A1AFF';
         let isFirstClick = true; // Флаг для отслеживания первого клика
+
+        triangle.addEventListener('click', function () {
+            if (isFirstClick) {
+                triangle.style.borderBottom = size + 'px solid yellow';
+                isFirstClick = false;
+            } else {
+                triangle.remove();
+            }
+        });
 
         drawField.appendChild(triangle);
     }
